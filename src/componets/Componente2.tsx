@@ -1,4 +1,3 @@
-import React from 'react'
 
 const Componente2 = ({text =''}) => {
   return (

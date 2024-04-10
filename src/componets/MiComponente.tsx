@@ -1,15 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { MyContext } from './UseContext/Mycontext';
 
-const MiComponente = ({text ='', textToPrint = ''}) => {
+const MiComponente = () => {
 
+const { counter, setCounter } = useContext(MyContext);
 
-    const ComfirmPropt = () => {
-        confirm (textToPrint);
+    const suma = () => {
+        setCounter(counter + 1);
     }
 
     return (
         <>
-            <button onClick={ComfirmPropt} type='button'>{text}</button>
+        <h1>{counter}</h1>
+            <button onClick={suma} type='button'>Aqui se cambia el numero</button>
+            
         </>
     )
 }
