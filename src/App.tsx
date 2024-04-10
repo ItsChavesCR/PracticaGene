@@ -1,12 +1,15 @@
 import {} from 'react'
-import Componente1 from './componets/Componente1'
-
+import MiComponente from './componets/MiComponente'
+import MyContextProvider from './componets/UseContext/MyContextProvider'
 
 function App() {
 
   return (
     <>
-    <Componente1 text='HOASHDFLSJLFSLJF'/>
+      <MyContextProvider>
+        <MiComponente/>
+      </MyContextProvider>
+
     </>
   )
 }
